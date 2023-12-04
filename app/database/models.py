@@ -1,6 +1,6 @@
 from typing import Any
 
-from sqlalchemy import Column, String, DateTime, Integer
+from sqlalchemy import Column, String, DateTime, Integer, BigInteger
 from app.database.db import Base
 
 
@@ -8,7 +8,7 @@ class User(Base):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    id_user = Column(Integer)
+    id_user = Column(BigInteger)
     answer = Column(String)
     question = Column(String)
     datatime = Column(DateTime)
